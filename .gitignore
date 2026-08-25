@@ -1,0 +1,5 @@
+.sandbox/
+.asset/
+.screenshot/
+.DS_Store
+.versions/
