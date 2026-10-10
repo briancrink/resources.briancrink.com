@@ -1,0 +1,3851 @@
+{
+  "updated": "2026-10-10",
+  "source": "site.briancrink.com/map",
+  "modes": {
+    "development": {
+      "label": "Development",
+      "statuses": [
+        "planned",
+        "in-development",
+        "released"
+      ]
+    },
+    "availability": {
+      "label": "Availability",
+      "statuses": [
+        "unlisted",
+        "preview",
+        "maintenance",
+        "down",
+        "live"
+      ]
+    }
+  },
+  "domains": [
+    {
+      "subdomain": "briancrink",
+      "host": "briancrink.com",
+      "url": "https://briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n              <path d=\"M3.15 7.85 L8.85 4.55 L15.05 8.05 L20.7 4.75 L20.7 16.25 L15.05 19.55 L8.85 16.05 L3.15 19.35 Z\" stroke-width=\"1.15\"/>\n              <line x1=\"8.85\" y1=\"6.2\" x2=\"8.85\" y2=\"14.4\" stroke-width=\"0.4\"/>\n              <line x1=\"15.05\" y1=\"9.7\" x2=\"15.05\" y2=\"17.9\" stroke-width=\"0.4\"/>\n            </svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Site"
+      },
+      "pages": [
+        {
+          "title": "Academia",
+          "path": "/academia",
+          "url": "https://briancrink.com/academia",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "API",
+          "path": "/api",
+          "url": "https://briancrink.com/api",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Business",
+          "path": "/business",
+          "url": "https://briancrink.com/business",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/dev",
+          "url": "https://briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Employment",
+          "path": "/hire",
+          "url": "https://briancrink.com/hire",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Events",
+          "path": "/event",
+          "url": "https://briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v4.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Home",
+          "path": "/home",
+          "url": "https://briancrink.com/home",
+          "dev": {
+            "status": "planned",
+            "version": "v4.0.0",
+            "category": "Home"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Newsfeed",
+          "path": "/feed",
+          "url": "https://briancrink.com/feed",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Operating Systems",
+          "path": "/os",
+          "url": "https://briancrink.com/os",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Portal",
+          "path": "/portal",
+          "url": "https://briancrink.com/portal",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Resume",
+          "path": "/resume",
+          "url": "https://briancrink.com/resume",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Shop",
+          "path": "/shop",
+          "url": "https://briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site",
+          "path": "/site",
+          "url": "https://briancrink.com/site",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Map",
+          "path": "/sitemap",
+          "url": "https://briancrink.com/sitemap",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Social Media",
+          "path": "/social",
+          "url": "https://briancrink.com/social",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Storefront",
+          "path": "/store",
+          "url": "https://briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "academia",
+      "host": "academia.briancrink.com",
+      "url": "https://academia.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M2 8l10-5 10 5-10 5-10-5z\"/><path d=\"M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5\"/><path d=\"M22 8v6\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v3.0.0",
+        "category": "Academia"
+      },
+      "pages": [
+        {
+          "title": "Academic History",
+          "path": "/history",
+          "url": "https://academia.briancrink.com/history",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "AccessEdu",
+          "path": "/accessedu",
+          "url": "https://academia.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://academia.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Newsfeed",
+          "path": "/feed",
+          "url": "https://academia.briancrink.com/feed",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "api",
+      "host": "api.briancrink.com",
+      "url": "https://api.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 3v4M15 3v4\"/><path d=\"M6 7h12v4a6 6 0 0 1-12 0V7z\"/><path d=\"M12 17v4\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v2.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "API Docs",
+          "path": "/docs",
+          "url": "https://api.briancrink.com/docs",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "API Repo",
+          "path": "/repo",
+          "url": "https://api.briancrink.com/repo",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "API Support",
+          "path": "/support",
+          "url": "https://api.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/dev",
+          "url": "https://api.briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site API",
+          "path": "/site",
+          "url": "https://api.briancrink.com/site",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Store API",
+          "path": "/store",
+          "url": "https://api.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "app",
+      "host": "app.briancrink.com",
+      "url": "https://app.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"7\" y=\"2\" width=\"10\" height=\"20\" rx=\"2\"/><line x1=\"11\" y1=\"18\" x2=\"13\" y2=\"18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v2.0.0",
+        "category": "Apps"
+      },
+      "pages": [
+        {
+          "title": "AccessEdu App",
+          "path": "/accessedu",
+          "url": "https://app.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "CareerOS App",
+          "path": "/careeros",
+          "url": "https://app.briancrink.com/careeros",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://app.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/development",
+          "url": "https://app.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Minimaliste App",
+          "path": "/minimaliste",
+          "url": "https://app.briancrink.com/minimaliste",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Media",
+          "path": "/social",
+          "url": "https://app.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Streamline App",
+          "path": "/streamline",
+          "url": "https://app.briancrink.com/streamline",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://app.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "TinySpace App",
+          "path": "/tinyspace",
+          "url": "https://app.briancrink.com/tinyspace",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "apps",
+      "host": "apps.briancrink.com",
+      "url": "https://apps.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v2.0.0",
+        "category": "Apps"
+      },
+      "pages": [
+        {
+          "title": "AccessEdu App",
+          "path": "/accessedu",
+          "url": "https://apps.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "CareerOS App",
+          "path": "/careeros",
+          "url": "https://apps.briancrink.com/careeros",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://apps.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/dev",
+          "url": "https://apps.briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Minimaliste App",
+          "path": "/minimaliste",
+          "url": "https://apps.briancrink.com/minimaliste",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Media",
+          "path": "/social",
+          "url": "https://apps.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Streamline App",
+          "path": "/streamline",
+          "url": "https://apps.briancrink.com/streamline",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://apps.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "TinySpace App",
+          "path": "/tinyspace",
+          "url": "https://apps.briancrink.com/tinyspace",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "business",
+      "host": "business.briancrink.com",
+      "url": "https://business.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"13\" rx=\"2\"/><path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"/></svg>",
+      "dev": {
+        "status": "released",
+        "version": "v1.0.0",
+        "category": "Commerce"
+      },
+      "pages": [
+        {
+          "title": "CareerOS",
+          "path": "/careeros",
+          "url": "https://business.briancrink.com/careeros",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://business.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Events",
+          "path": "/event",
+          "url": "https://business.briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Feed",
+          "path": "/feed",
+          "url": "https://business.briancrink.com/feed",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Hire",
+          "path": "/hire",
+          "url": "https://business.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Inquiry",
+          "path": "/inquiry",
+          "url": "https://business.briancrink.com/inquiry",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Opportunity",
+          "path": "/opportunity",
+          "url": "https://business.briancrink.com/opportunity",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop",
+          "path": "/shop",
+          "url": "https://business.briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Media",
+          "path": "/social",
+          "url": "https://business.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Startup",
+          "path": "/startup",
+          "url": "https://business.briancrink.com/startup",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Storefront",
+          "path": "/store",
+          "url": "https://business.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Streamline",
+          "path": "/streamline",
+          "url": "https://business.briancrink.com/streamline",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://business.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "career",
+      "host": "career.briancrink.com",
+      "url": "https://career.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"3 17 9 11 13 15 21 6\"/><polyline points=\"15 6 21 6 21 12\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Career"
+      },
+      "pages": [
+        {
+          "title": "Career Development",
+          "path": "/development",
+          "url": "https://career.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "unlisted"
+          }
+        },
+        {
+          "title": "Career Path",
+          "path": "/path",
+          "url": "https://career.briancrink.com/path",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Career Status",
+          "path": "/status",
+          "url": "https://career.briancrink.com/status",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "CareerOS",
+          "path": "/os",
+          "url": "https://career.briancrink.com/os",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+                    "availability": {
+            "status": "unlisted"
+          }
+        },
+        {
+          "title": "Dashboard",
+          "path": "/dashboard",
+          "url": "https://career.briancrink.com/dashboard",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Events",
+          "path": "/event",
+          "url": "https://career.briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "unlisted"
+          }
+        },
+        {
+          "title": "Hire",
+          "path": "/hire",
+          "url": "https://career.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "unlisted"
+          }
+        },
+        {
+          "title": "Interview",
+          "path": "/interview",
+          "url": "https://career.briancrink.com/interview",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Jobs",
+          "path": "/jobs",
+          "url": "https://career.briancrink.com/jobs",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Practice",
+          "path": "/practice",
+          "url": "https://career.briancrink.com/practice",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Resume",
+          "path": "/resume",
+          "url": "https://career.briancrink.com/resume",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Roles",
+          "path": "/roles",
+          "url": "https://career.briancrink.com/roles",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "unlisted"
+          }
+        },
+        {
+          "title": "Search",
+          "path": "/search",
+          "url": "https://career.briancrink.com/search",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Services",
+          "path": "/services",
+          "url": "https://career.briancrink.com/services",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "contact",
+      "host": "contact.briancrink.com",
+      "url": "https://contact.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><polyline points=\"2 6 12 13 22 6\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Contact"
+      },
+      "pages": [
+        {
+          "title": "Career",
+          "path": "/career",
+          "url": "https://contact.briancrink.com/career",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Hire",
+          "path": "/hire",
+          "url": "https://contact.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Jobs",
+          "path": "/jobs",
+          "url": "https://contact.briancrink.com/jobs",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop",
+          "path": "/shop",
+          "url": "https://contact.briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site",
+          "path": "/site",
+          "url": "https://contact.briancrink.com/site",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Media",
+          "path": "/social",
+          "url": "https://contact.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Storefront",
+          "path": "/store",
+          "url": "https://contact.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://contact.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Contact"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "demo",
+      "host": "demo.briancrink.com",
+      "url": "https://demo.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Adopt a Cat",
+          "path": "/adopt/cat",
+          "url": "https://demo.briancrink.com/adopt/cat",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Dog",
+          "path": "/adopt/dog",
+          "url": "https://demo.briancrink.com/adopt/dog",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Pet",
+          "path": "/adopt/pet",
+          "url": "https://demo.briancrink.com/adopt/pet",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "dev",
+      "host": "dev.briancrink.com",
+      "url": "https://dev.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Apps",
+          "path": "/apps",
+          "url": "https://dev.briancrink.com/apps",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Architecture",
+          "path": "/architecture",
+          "url": "https://dev.briancrink.com/architecture",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Backlog",
+          "path": "/backlog",
+          "url": "https://dev.briancrink.com/backlog",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Changelog",
+          "path": "/changelog",
+          "url": "https://dev.briancrink.com/changelog",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contributions",
+          "path": "/contributions",
+          "url": "https://dev.briancrink.com/contributions",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Design",
+          "path": "/design",
+          "url": "https://dev.briancrink.com/design",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Docs",
+          "path": "/docs",
+          "url": "https://dev.briancrink.com/docs",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Dotfiles",
+          "path": "/dotfiles",
+          "url": "https://dev.briancrink.com/dotfiles",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Github",
+          "path": "/github",
+          "url": "https://dev.briancrink.com/github",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Issues",
+          "path": "/issues",
+          "url": "https://dev.briancrink.com/issues",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Lab",
+          "path": "/lab",
+          "url": "https://dev.briancrink.com/lab",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Releases",
+          "path": "/releases",
+          "url": "https://dev.briancrink.com/releases",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Repos",
+          "path": "/repos",
+          "url": "https://dev.briancrink.com/repos",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Roadmap",
+          "path": "/roadmap",
+          "url": "https://dev.briancrink.com/roadmap",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site",
+          "path": "/site",
+          "url": "https://dev.briancrink.com/site",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Status",
+          "path": "/status",
+          "url": "https://dev.briancrink.com/status",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tasks",
+          "path": "/tasks",
+          "url": "https://dev.briancrink.com/tasks",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Updates",
+          "path": "/updates",
+          "url": "https://dev.briancrink.com/updates",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "feed",
+      "host": "feed.briancrink.com",
+      "url": "https://feed.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 11a9 9 0 0 1 9 9\"/><path d=\"M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v2.0.0",
+        "category": "Feed"
+      },
+      "pages": [
+        {
+          "title": "Auto",
+          "path": "/auto",
+          "url": "https://feed.briancrink.com/auto",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Clothing",
+          "path": "/clothing",
+          "url": "https://feed.briancrink.com/clothing",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Culture",
+          "path": "/culture",
+          "url": "https://feed.briancrink.com/culture",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Design",
+          "path": "/design",
+          "url": "https://feed.briancrink.com/design",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/dev",
+          "url": "https://feed.briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Electric Scooter",
+          "path": "/scooter",
+          "url": "https://feed.briancrink.com/scooter",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Entertainment",
+          "path": "/entertainment",
+          "url": "https://feed.briancrink.com/entertainment",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Gaming",
+          "path": "/gaming",
+          "url": "https://feed.briancrink.com/gaming",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Graphic Design",
+          "path": "/design/graphic",
+          "url": "https://feed.briancrink.com/design/graphic",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Home Design",
+          "path": "/design/home",
+          "url": "https://feed.briancrink.com/design/home",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Mechanical Keyboards",
+          "path": "/keyboards",
+          "url": "https://feed.briancrink.com/keyboards",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Music",
+          "path": "/music",
+          "url": "https://feed.briancrink.com/music",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Music Review",
+          "path": "/review/music",
+          "url": "https://feed.briancrink.com/review/music",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Politics",
+          "path": "/politics",
+          "url": "https://feed.briancrink.com/politics",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Productivity",
+          "path": "/productivity",
+          "url": "https://feed.briancrink.com/productivity",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Software",
+          "path": "/software",
+          "url": "https://feed.briancrink.com/software",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Sports",
+          "path": "/sports",
+          "url": "https://feed.briancrink.com/sports",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech",
+          "path": "/tech",
+          "url": "https://feed.briancrink.com/tech",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "TV Review",
+          "path": "/review/tv",
+          "url": "https://feed.briancrink.com/review/tv",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Web Design",
+          "path": "/design/web",
+          "url": "https://feed.briancrink.com/design/web",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Woodcraft",
+          "path": "/woodcraft",
+          "url": "https://feed.briancrink.com/woodcraft",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Feed"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "hire",
+      "host": "hire.briancrink.com",
+      "url": "https://hire.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2.45c2.55 0 4.35 1.95 4.45 5.05.1 1.75-.3 3.3-1.15 4.3C14.5 13.2 13.3 13.9 12 13.9s-2.5-.7-3.3-2.1C7.85 10.8 7.45 9.25 7.55 7.5 7.65 4.4 9.45 2.45 12 2.45z\"/><path fill-rule=\"evenodd\" d=\"M3.05 22v-5.5c.15-2.05 3.5-3.35 7.2-2.55L12.05 16.2 13.8 14c3.7-.85 7.05.5 7.15 2.5V22H3.05zM10.2 14.85 12.05 16.7 13.85 14.9l.85.7-1.05 6.4h-3.2l-1.1-6.4.85-.75zM16.05 17.2h1.65v1.1H16.05z\"/><path d=\"M11.25 16.55h1.6L12.05 21.2z\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Career"
+      },
+      "pages": [
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://hire.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Job Roles",
+          "path": "/#roles",
+          "url": "https://hire.briancrink.com/#roles",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Job Services",
+          "path": "/#services",
+          "url": "https://hire.briancrink.com/#services",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Resume",
+          "path": "/resume",
+          "url": "https://hire.briancrink.com/resume",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "live"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "home",
+      "host": "home.briancrink.com",
+      "url": "https://home.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 11l9-7 9 7\"/><path d=\"M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9\"/><path d=\"M9 20v-6h6v6\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v4.0.0",
+        "category": "Home"
+      },
+      "pages": [
+        {
+          "title": "Home Build",
+          "path": "/build",
+          "url": "https://home.briancrink.com/build",
+          "dev": {
+            "status": "planned",
+            "version": "v4.0.0",
+            "category": "Home"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Home Space",
+          "path": "/space",
+          "url": "https://home.briancrink.com/space",
+          "dev": {
+            "status": "planned",
+            "version": "v4.0.0",
+            "category": "Home"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "jobs",
+      "host": "jobs.briancrink.com",
+      "url": "https://jobs.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10.6\" cy=\"10.6\" r=\"5.55\"/><line x1=\"14.7\" y1=\"14.7\" x2=\"19.35\" y2=\"19.35\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Career"
+      },
+      "pages": [
+        {
+          "title": "Dashboard",
+          "path": "/dashboard",
+          "url": "https://jobs.briancrink.com/dashboard",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Events",
+          "path": "/event",
+          "url": "https://jobs.briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Hire",
+          "path": "/hire",
+          "url": "https://jobs.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Interview",
+          "path": "/interview",
+          "url": "https://jobs.briancrink.com/interview",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Job Search",
+          "path": "/search",
+          "url": "https://jobs.briancrink.com/search",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Job Status",
+          "path": "/status",
+          "url": "https://jobs.briancrink.com/status",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Practice",
+          "path": "/practice",
+          "url": "https://jobs.briancrink.com/practice",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Resume",
+          "path": "/resume",
+          "url": "https://jobs.briancrink.com/resume",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Roles",
+          "path": "/roles",
+          "url": "https://jobs.briancrink.com/roles",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Services",
+          "path": "/services",
+          "url": "https://jobs.briancrink.com/services",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Career"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "os",
+      "host": "os.briancrink.com",
+      "url": "https://os.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2.3\" y=\"2.3\" width=\"19.4\" height=\"19.4\" rx=\"5.2\"/><path d=\"M12.25 2.35C11.05 6.4 10.7 9.15 11.35 11.05L14.2 12.45 10.45 13.7C10.55 16.55 11.35 19.25 12.55 21.65\"/><rect x=\"7.05\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"15.45\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M7.2 15.7c1.55 2.35 3.35 3.35 4.8 3.35 1.45 0 3.25-1 4.8-3.35\" stroke-width=\"1.25\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Site"
+      },
+      "pages": [
+        {
+          "title": "BossOS",
+          "path": "/boss",
+          "url": "https://os.briancrink.com/boss",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "CareerOS",
+          "path": "/career",
+          "url": "https://os.briancrink.com/career",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "DevOS",
+          "path": "/dev",
+          "url": "https://os.briancrink.com/dev",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "LifeOS",
+          "path": "/life",
+          "url": "https://os.briancrink.com/life",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "portal",
+      "host": "portal.briancrink.com",
+      "url": "https://portal.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"1\"/><line x1=\"14.5\" y1=\"12\" x2=\"14.5\" y2=\"12.01\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Site"
+      },
+      "pages": [
+        {
+          "title": "BossOS",
+          "path": "/#boss",
+          "url": "https://portal.briancrink.com/#boss",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "CareerOS",
+          "path": "/#career",
+          "url": "https://portal.briancrink.com/#career",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "DevOS",
+          "path": "/#dev",
+          "url": "https://portal.briancrink.com/#dev",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "LifeOS",
+          "path": "/#life",
+          "url": "https://portal.briancrink.com/#life",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "resources",
+      "host": "resources.briancrink.com",
+      "url": "https://resources.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5c-2-1.5-5-2-9-2v15c4 0 7 .5 9 2 2-1.5 5-2 9-2V3c-4 0-7 .5-9 2z\"/><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"20\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Dev Resources",
+          "path": "/dev",
+          "url": "https://resources.briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Github",
+          "path": "/github",
+          "url": "https://resources.briancrink.com/github",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Resources",
+          "path": "/site",
+          "url": "https://resources.briancrink.com/site",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "shop",
+      "host": "shop.briancrink.com",
+      "url": "https://shop.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v5.0.0",
+        "category": "Commerce"
+      },
+      "pages": [
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://shop.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/development",
+          "url": "https://shop.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop Store",
+          "path": "/store",
+          "url": "https://shop.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Map",
+          "path": "/sitemap",
+          "url": "https://shop.briancrink.com/sitemap",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://shop.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "site",
+      "host": "site.briancrink.com",
+      "url": "https://site.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5.1\" y=\"1.15\" width=\"13.8\" height=\"9.6\" rx=\"1.15\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6.25 1.2h11.5A1.1 1.1 0 0 1 18.85 2.3v2.05H5.15V2.3A1.1 1.1 0 0 1 6.25 1.2zM7.35 2.35a.48.48 0 1 1-.96 0a.48.48 0 0 1 .96 0zM8.95 2.35a.48.48 0 1 1-.96 0a.48.48 0 0 1 .96 0zM10.55 2.35a.48.48 0 1 1-.96 0a.48.48 0 0 1 .96 0z\"/><path d=\"M12 10.75v3.05M12 13.8H5.8v2.15M12 13.8h6.2v2.15\"/><rect x=\"2.35\" y=\"15.95\" width=\"5.3\" height=\"6.05\" rx=\"0.7\" stroke-width=\"0.95\"/><rect x=\"9.35\" y=\"15.95\" width=\"5.3\" height=\"6.05\" rx=\"0.7\" stroke-width=\"0.95\"/><rect x=\"16.35\" y=\"15.95\" width=\"5.3\" height=\"6.05\" rx=\"0.7\" stroke-width=\"0.95\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Site"
+      },
+      "pages": [
+        {
+          "title": "Cookie Policy",
+          "path": "/cookie",
+          "url": "https://site.briancrink.com/cookie",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Disclaimer",
+          "path": "/disclaimer",
+          "url": "https://site.briancrink.com/disclaimer",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Editorial",
+          "path": "/editorial",
+          "url": "https://site.briancrink.com/editorial",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Legal",
+          "path": "/legal",
+          "url": "https://site.briancrink.com/legal",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Privacy Policy",
+          "path": "/privacy",
+          "url": "https://site.briancrink.com/privacy",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Architecture",
+          "path": "/architecture",
+          "url": "https://site.briancrink.com/architecture",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Availability",
+          "path": "/availability",
+          "url": "https://site.briancrink.com/availability",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Site Backlog",
+          "path": "/backlog",
+          "url": "https://site.briancrink.com/backlog",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Changelog",
+          "path": "/changelog",
+          "url": "https://site.briancrink.com/changelog",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Contact",
+          "path": "/contact",
+          "url": "https://site.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Design",
+          "path": "/design",
+          "url": "https://site.briancrink.com/design",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Development",
+          "path": "/development",
+          "url": "https://site.briancrink.com/development",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Site Docs",
+          "path": "/docs",
+          "url": "https://site.briancrink.com/docs",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Issues",
+          "path": "/issues",
+          "url": "https://site.briancrink.com/issues",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Lab",
+          "path": "/lab",
+          "url": "https://site.briancrink.com/lab",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Map",
+          "path": "/map",
+          "url": "https://site.briancrink.com/map",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Site Policy",
+          "path": "/policy",
+          "url": "https://site.briancrink.com/policy",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Releases",
+          "path": "/releases",
+          "url": "https://site.briancrink.com/releases",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Repositories",
+          "path": "/repos",
+          "url": "https://site.briancrink.com/repos",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Site Roadmap",
+          "path": "/roadmap",
+          "url": "https://site.briancrink.com/roadmap",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Status",
+          "path": "/status",
+          "url": "https://site.briancrink.com/status",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Site Tasks",
+          "path": "/tasks",
+          "url": "https://site.briancrink.com/tasks",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Updates",
+          "path": "/updates",
+          "url": "https://site.briancrink.com/updates",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Stack",
+          "path": "/stack",
+          "url": "https://site.briancrink.com/stack",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Terms of Service",
+          "path": "/tos",
+          "url": "https://site.briancrink.com/tos",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "social",
+      "host": "social.briancrink.com",
+      "url": "https://social.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"5\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"6\" r=\"2.5\"/><circle cx=\"18\" cy=\"18\" r=\"2.5\"/><line x1=\"7.3\" y1=\"10.8\" x2=\"15.7\" y2=\"7.2\"/><line x1=\"7.3\" y1=\"13.2\" x2=\"15.7\" y2=\"16.8\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Social"
+      },
+      "pages": [
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://social.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Events",
+          "path": "/event",
+          "url": "https://social.briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Newsfeed",
+          "path": "/feed",
+          "url": "https://social.briancrink.com/feed",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Profiles",
+          "path": "/profile",
+          "url": "https://social.briancrink.com/profile",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Space",
+          "path": "/space",
+          "url": "https://social.briancrink.com/space",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Social"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "space",
+      "host": "space.briancrink.com",
+      "url": "https://space.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"width:1.4em;height:1.4em\"><path d=\"M12 2.15L1.85 7.2v10.1L12 12.25z\"/><path d=\"M12 2.15l10.15 5.05v10.1L12 12.25z\"/><path d=\"M1.85 17.3L12 22.35l10.15-5.05L12 12.25z\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v3.0.0",
+        "category": "Spaces"
+      },
+      "pages": [
+        {
+          "title": "Beach Space",
+          "path": "/beach",
+          "url": "https://space.briancrink.com/beach",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Bed Space",
+          "path": "/bed",
+          "url": "https://space.briancrink.com/bed",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Botanical Space",
+          "path": "/botanical",
+          "url": "https://space.briancrink.com/botanical",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Cafe Space",
+          "path": "/cafe",
+          "url": "https://space.briancrink.com/cafe",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Car Space",
+          "path": "/car",
+          "url": "https://space.briancrink.com/car",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Climate Space",
+          "path": "/climate",
+          "url": "https://space.briancrink.com/climate",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Comic Space",
+          "path": "/comic",
+          "url": "https://space.briancrink.com/comic",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Cycling Space",
+          "path": "/bicycle",
+          "url": "https://space.briancrink.com/bicycle",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Desk Space",
+          "path": "/desk",
+          "url": "https://space.briancrink.com/desk",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development Space",
+          "path": "/dev",
+          "url": "https://space.briancrink.com/dev",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Digital Space",
+          "path": "/digital",
+          "url": "https://space.briancrink.com/digital",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Entry Space",
+          "path": "/entry",
+          "url": "https://space.briancrink.com/entry",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Gaming Space",
+          "path": "/gaming",
+          "url": "https://space.briancrink.com/gaming",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Garage Space",
+          "path": "/garage",
+          "url": "https://space.briancrink.com/garage",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Guest Space",
+          "path": "/guest",
+          "url": "https://space.briancrink.com/guest",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "HiFi Space",
+          "path": "/hifi",
+          "url": "https://space.briancrink.com/hifi",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Hockey Space",
+          "path": "/hockey",
+          "url": "https://space.briancrink.com/hockey",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Home Space",
+          "path": "/home",
+          "url": "https://space.briancrink.com/home",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Hygeine Space",
+          "path": "/hygeine",
+          "url": "https://space.briancrink.com/hygeine",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Keyboard Space",
+          "path": "/keyboard",
+          "url": "https://space.briancrink.com/keyboard",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Kitchen Space",
+          "path": "/kitchen",
+          "url": "https://space.briancrink.com/kitchen",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Living Space",
+          "path": "/living",
+          "url": "https://space.briancrink.com/living",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Lounge Space",
+          "path": "/lounge",
+          "url": "https://space.briancrink.com/lounge",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Personal Space",
+          "path": "/personal",
+          "url": "https://space.briancrink.com/personal",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Plant Space",
+          "path": "/plant",
+          "url": "https://space.briancrink.com/plant",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Project Space",
+          "path": "/project",
+          "url": "https://space.briancrink.com/project",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Relational Space",
+          "path": "/relational",
+          "url": "https://space.briancrink.com/relational",
+          "dev": {
+            "status": "in-development",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Social Space",
+          "path": "/social",
+          "url": "https://space.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Storage Space",
+          "path": "/storage",
+          "url": "https://space.briancrink.com/storage",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Utility Space",
+          "path": "/utility",
+          "url": "https://space.briancrink.com/utility",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Wardrobe Space",
+          "path": "/wardrobe",
+          "url": "https://space.briancrink.com/wardrobe",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Work Space",
+          "path": "/work",
+          "url": "https://space.briancrink.com/work",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Spaces"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "status",
+      "host": "status.briancrink.com",
+      "url": "https://status.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9.4\"/><path d=\"M7.8 12.3l2.9 2.9 5.5-6.4\"/></svg>",
+      "dev": {
+        "status": "in-development",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Academia",
+          "path": "/academia",
+          "url": "https://status.briancrink.com/academia",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "API",
+          "path": "/api",
+          "url": "https://status.briancrink.com/api",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "App",
+          "path": "/app",
+          "url": "https://status.briancrink.com/app",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Career",
+          "path": "/career",
+          "url": "https://status.briancrink.com/career",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/development",
+          "url": "https://status.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Home",
+          "path": "/home",
+          "url": "https://status.briancrink.com/home",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Jobs",
+          "path": "/jobs",
+          "url": "https://status.briancrink.com/jobs",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Life",
+          "path": "/life",
+          "url": "https://status.briancrink.com/life",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop",
+          "path": "/shop",
+          "url": "https://status.briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site",
+          "path": "/site",
+          "url": "https://status.briancrink.com/site",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
+          "title": "Social",
+          "path": "/social",
+          "url": "https://status.briancrink.com/social",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Store",
+          "path": "/store",
+          "url": "https://status.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech",
+          "path": "/tech",
+          "url": "https://status.briancrink.com/tech",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Travel",
+          "path": "/travel",
+          "url": "https://status.briancrink.com/travel",
+          "dev": {
+            "status": "planned",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "live"
+      }
+    },
+    {
+      "subdomain": "store",
+      "host": "store.briancrink.com",
+      "url": "https://store.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 9l1-5h16l1 5\"/><path d=\"M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0\"/><path d=\"M5 9v11h14V9\"/><path d=\"M10 20v-6h4v6\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v5.0.0",
+        "category": "Commerce"
+      },
+      "pages": [
+        {
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://store.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Development",
+          "path": "/development",
+          "url": "https://store.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Site Map",
+          "path": "/sitemap",
+          "url": "https://store.briancrink.com/sitemap",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop",
+          "path": "/shop",
+          "url": "https://store.briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Support",
+          "path": "/support",
+          "url": "https://store.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "support",
+      "host": "support.briancrink.com",
+      "url": "https://support.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><polyline points=\"2 6 12 13 22 6\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v5.0.0",
+        "category": "Commerce"
+      },
+      "pages": [
+        {
+          "title": "API Support",
+          "path": "/api",
+          "url": "https://support.briancrink.com/api",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "App Support",
+          "path": "/app",
+          "url": "https://support.briancrink.com/app",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Business Support",
+          "path": "/business",
+          "url": "https://support.briancrink.com/business",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Contact Support",
+          "path": "/contact",
+          "url": "https://support.briancrink.com/contact",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Developer Support",
+          "path": "/developer",
+          "url": "https://support.briancrink.com/developer",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Shop Support",
+          "path": "/shop",
+          "url": "https://support.briancrink.com/shop",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Store Support",
+          "path": "/store",
+          "url": "https://support.briancrink.com/store",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "tech",
+      "host": "tech.briancrink.com",
+      "url": "https://tech.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"6\" y=\"6\" width=\"12\" height=\"12\" rx=\"1.5\"/><rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"/><path d=\"M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v2.0.0",
+        "category": "Tech"
+      },
+      "pages": [
+        {
+          "title": "Employment",
+          "path": "/hire",
+          "url": "https://tech.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Everyday Carry",
+          "path": "/edc",
+          "url": "https://tech.briancrink.com/edc",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Events",
+          "path": "/event",
+          "url": "https://tech.briancrink.com/event",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Feed",
+          "path": "/feed",
+          "url": "https://tech.briancrink.com/feed",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Setup",
+          "path": "/setup",
+          "url": "https://tech.briancrink.com/setup",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Stack",
+          "path": "/stack",
+          "url": "https://tech.briancrink.com/stack",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Workflow",
+          "path": "/workflow",
+          "url": "https://tech.briancrink.com/workflow",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Tech Workspace",
+          "path": "/workspace",
+          "url": "https://tech.briancrink.com/workspace",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Tech"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "template",
+      "host": "template.briancrink.com",
+      "url": "https://template.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Adopt a Cat",
+          "path": "/adopt/cat",
+          "url": "https://template.briancrink.com/adopt/cat",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Dog",
+          "path": "/adopt/dog",
+          "url": "https://template.briancrink.com/adopt/dog",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Pet",
+          "path": "/adopt/pet",
+          "url": "https://template.briancrink.com/adopt/pet",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "websites",
+      "host": "websites.briancrink.com",
+      "url": "https://websites.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><rect x=\"2.55\" y=\"3.9\" width=\"18.9\" height=\"16.2\" rx=\"2.35\" stroke=\"currentColor\" stroke-width=\"1.75\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M5.05 3.95h13.9A2.3 2.3 0 0 1 21.25 6.25v2.2H2.75v-2.2A2.3 2.3 0 0 1 5.05 3.95zM7.05 6.2a.7.7 0 1 1-1.4 0a.7.7 0 0 1 1.4 0zM9.5 6.2a.7.7 0 1 1-1.4 0a.7.7 0 0 1 1.4 0zM11.95 6.2a.7.7 0 1 1-1.4 0a.7.7 0 0 1 1.4 0z\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v2.0.0",
+        "category": "Site"
+      },
+      "pages": [
+        {
+          "title": "access.edu",
+          "path": "/accessedu",
+          "url": "https://websites.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "briancrink.com",
+          "path": "/briancrink",
+          "url": "https://websites.briancrink.com/briancrink",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "brianelisa.com",
+          "path": "/brianelisa",
+          "url": "https://websites.briancrink.com/brianelisa",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "minimalisteconsultant.com",
+          "path": "/minimaliste",
+          "url": "https://websites.briancrink.com/minimaliste",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "sharewithmiamor.com",
+          "path": "/sharewithmiamor",
+          "url": "https://websites.briancrink.com/sharewithmiamor",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "streamline.app",
+          "path": "/streamline",
+          "url": "https://websites.briancrink.com/streamline",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "tiny.space",
+          "path": "/tinyspace",
+          "url": "https://websites.briancrink.com/tinyspace",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    }
+  ]
+}
