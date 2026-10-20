@@ -1227,7 +1227,7 @@
             "status": "live"
           }
         },
-                {
+        {
           "title": "Adopt a Dog",
           "path": "/adopt/dog",
           "url": "https://demo.briancrink.com/adopt/dog",
@@ -1240,7 +1240,7 @@
             "status": "live"
           }
         },
-                {
+        {
           "title": "Adopt a Pet",
           "path": "/adopt/pet",
           "url": "https://demo.briancrink.com/adopt/pet",
@@ -1251,6 +1251,19 @@
           },
           "availability": {
             "status": "live"
+          }
+        },
+        {
+          "title": "Map My Build",
+          "path": "/mapmybuild",
+          "url": "https://demo.briancrink.com/mapmybuild",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "preview"
           }
         }
       ],
@@ -3783,6 +3796,19 @@
           "url": "https://websites.briancrink.com/brianelisa",
           "dev": {
             "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "mapmybuild.com",
+          "path": "/mapmybuild",
+          "url": "https://websites.briancrink.com/mapmybuild",
+          "dev": {
+            "status": "in-development",
             "version": "v2.0.0",
             "category": "Site"
           },
