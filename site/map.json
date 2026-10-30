@@ -498,6 +498,19 @@
           }
         },
         {
+          "title": "flūevent App",
+          "path": "/fluevent",
+          "url": "https://app.briancrink.com/fluevent",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Minimaliste App",
           "path": "/minimaliste",
           "url": "https://app.briancrink.com/minimaliste",
@@ -514,19 +527,6 @@
           "title": "Social Media",
           "path": "/social",
           "url": "https://app.briancrink.com/social",
-          "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Apps"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
-          "title": "flūevent App",
-          "path": "/fluevent",
-          "url": "https://app.briancrink.com/fluevent",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -579,19 +579,6 @@
       },
       "pages": [
         {
-          "title": "LearnOS App",
-          "path": "/learnos",
-          "url": "https://apps.briancrink.com/learnos",
-          "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Apps"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
           "title": "CareerOS App",
           "path": "/careeros",
           "url": "https://apps.briancrink.com/careeros",
@@ -631,6 +618,32 @@
           }
         },
         {
+          "title": "flūevent App",
+          "path": "/fluevent",
+          "url": "https://apps.briancrink.com/fluevent",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "LearnOS App",
+          "path": "/learnos",
+          "url": "https://apps.briancrink.com/learnos",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Minimalisté Assistant App",
           "path": "/minimaliste",
           "url": "https://apps.briancrink.com/minimaliste",
@@ -647,19 +660,6 @@
           "title": "Social Media",
           "path": "/social",
           "url": "https://apps.briancrink.com/social",
-          "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Apps"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
-          "title": "flūevent App",
-          "path": "/fluevent",
-          "url": "https://apps.briancrink.com/fluevent",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -764,6 +764,19 @@
           }
         },
         {
+          "title": "flūevent",
+          "path": "/fluevent",
+          "url": "https://business.briancrink.com/fluevent",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Hire",
           "path": "/hire",
           "url": "https://business.briancrink.com/hire",
@@ -848,19 +861,6 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Commerce"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
-          "title": "flūevent",
-          "path": "/fluevent",
-          "url": "https://business.briancrink.com/fluevent",
-          "dev": {
-            "status": "in-development",
-            "version": "v1.0.0",
             "category": "Commerce"
           },
           "availability": {
@@ -3765,19 +3765,6 @@
       },
       "pages": [
         {
-          "title": "learnOS.com",
-          "path": "/learnos",
-          "url": "https://websites.briancrink.com/learnos",
-          "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Site"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
           "title": "briancrink.com",
           "path": "/briancrink",
           "url": "https://websites.briancrink.com/briancrink",
@@ -3794,6 +3781,32 @@
           "title": "brianelisa.com",
           "path": "/brianelisa",
           "url": "https://websites.briancrink.com/brianelisa",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "flūevent.com",
+          "path": "/fluevent",
+          "url": "https://websites.briancrink.com/fluevent",
+          "dev": {
+            "status": "in-development",
+            "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "learnOS.com",
+          "path": "/learnos",
+          "url": "https://websites.briancrink.com/learnos",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -3836,19 +3849,6 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Site"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
-          "title": "flūevent.com",
-          "path": "/fluevent",
-          "url": "https://websites.briancrink.com/fluevent",
-          "dev": {
-            "status": "in-development",
-            "version": "v2.0.0",
             "category": "Site"
           },
           "availability": {
