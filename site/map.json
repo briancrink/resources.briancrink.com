@@ -446,19 +446,6 @@
       },
       "pages": [
         {
-          "title": "AccessEdu App",
-          "path": "/accessedu",
-          "url": "https://app.briancrink.com/accessedu",
-          "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Apps"
-          },
-          "availability": {
-            "status": "preview"
-          }
-        },
-        {
           "title": "CareerOS App",
           "path": "/careeros",
           "url": "https://app.briancrink.com/careeros",
@@ -501,6 +488,19 @@
           "title": "flūevent App",
           "path": "/fluevent",
           "url": "https://app.briancrink.com/fluevent",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "LearnOS App",
+          "path": "/learnos",
+          "url": "https://app.briancrink.com/learnos",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -3804,7 +3804,7 @@
           }
         },
         {
-          "title": "learnOS.com",
+          "title": "LearnOS.com",
           "path": "/learnos",
           "url": "https://websites.briancrink.com/learnos",
           "dev": {
