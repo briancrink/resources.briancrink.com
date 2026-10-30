@@ -524,9 +524,9 @@
           }
         },
         {
-          "title": "Streamline App",
-          "path": "/streamline",
-          "url": "https://app.briancrink.com/streamline",
+          "title": "flūevent App",
+          "path": "/fluevent",
+          "url": "https://app.briancrink.com/fluevent",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -579,9 +579,9 @@
       },
       "pages": [
         {
-          "title": "AccessEdu App",
-          "path": "/accessedu",
-          "url": "https://apps.briancrink.com/accessedu",
+          "title": "LearnOS App",
+          "path": "/learnos",
+          "url": "https://apps.briancrink.com/learnos",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -631,7 +631,7 @@
           }
         },
         {
-          "title": "Minimaliste App",
+          "title": "Minimalisté Assistant App",
           "path": "/minimaliste",
           "url": "https://apps.briancrink.com/minimaliste",
           "dev": {
@@ -657,9 +657,9 @@
           }
         },
         {
-          "title": "Streamline App",
-          "path": "/streamline",
-          "url": "https://apps.briancrink.com/streamline",
+          "title": "flūevent App",
+          "path": "/fluevent",
+          "url": "https://apps.briancrink.com/fluevent",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -855,9 +855,9 @@
           }
         },
         {
-          "title": "Streamline",
-          "path": "/streamline",
-          "url": "https://business.briancrink.com/streamline",
+          "title": "flūevent",
+          "path": "/fluevent",
+          "url": "https://business.briancrink.com/fluevent",
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
@@ -3765,9 +3765,9 @@
       },
       "pages": [
         {
-          "title": "access.edu",
-          "path": "/accessedu",
-          "url": "https://websites.briancrink.com/accessedu",
+          "title": "learnOS.com",
+          "path": "/learnos",
+          "url": "https://websites.briancrink.com/learnos",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -3817,11 +3817,11 @@
           }
         },
         {
-          "title": "minimalisteconsultant.com",
+          "title": "minimalistéconsultant.com",
           "path": "/minimaliste",
           "url": "https://websites.briancrink.com/minimaliste",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v2.0.0",
             "category": "Site"
           },
@@ -3843,11 +3843,11 @@
           }
         },
         {
-          "title": "streamline.app",
-          "path": "/streamline",
-          "url": "https://websites.briancrink.com/streamline",
+          "title": "flūevent.com",
+          "path": "/fluevent",
+          "url": "https://websites.briancrink.com/fluevent",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v2.0.0",
             "category": "Site"
           },
