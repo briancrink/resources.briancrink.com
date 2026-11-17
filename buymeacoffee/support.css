@@ -1,0 +1,108 @@
+/*! support.css | Made with Love + Buy Me a Coffee button + personal links | Documentation: README.md
+ * Button lettering: "Cookie" typeface (c) 2011 Ania Kruk (hello@aniakruk.com), with Reserved Font Name Cookie,
+ * drawn as vector outlines. Licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org
+ */
+.bcs{
+  --bcs-label:#555; --bcs-muted:#6b6b6b; --bcs-faint:#9a9a9a; --bcs-hover:#222; --bcs-focus:#4a78c2;
+  display:grid; justify-items:center; gap:14px; margin:26px auto 6px; text-align:center;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.4;
+}
+[data-theme="dark"] .bcs, .bcs[data-theme="dark"]{ --bcs-label:#a9b8d0; --bcs-muted:#8a9bb6; --bcs-faint:#6f82a3; --bcs-hover:#e7edf7; --bcs-focus:#7aa7ff; }
+@media (prefers-color-scheme:dark){ .bcs[data-theme="auto"]{ --bcs-label:#a9b8d0; --bcs-muted:#8a9bb6; --bcs-faint:#6f82a3; --bcs-hover:#e7edf7; --bcs-focus:#7aa7ff; } }
+.bcs *,.bcs *::before,.bcs *::after{box-sizing:border-box}
+
+/* "Made with Love ♥ • Enjoying my work?" */
+.bcs-line{margin:0; font-size:13px; color:var(--bcs-label); display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap}
+.bcs-heart{width:1.15em; height:1.08em; display:inline-block; vertical-align:-.15em}
+.bcs-dot{color:var(--bcs-faint); margin:0 2px}
+
+/* Button */
+.bcs-btn{display:inline-flex; align-items:center; gap:10px; height:60px; padding:0 24px; border-radius:12px;
+  background:#FFDD00; color:#000; border:1px solid #000; text-decoration:none; line-height:1;
+  box-shadow:0 1px 2px rgba(190,190,190,.5); transition:transform .2s ease, box-shadow .2s ease}
+.bcs-btn:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.bcs-btn:focus-visible{outline:3px solid var(--bcs-focus); outline-offset:3px}
+.bcs-dev{width:34px; height:34px; flex:none; display:block}
+.bcs-text{position:relative; display:inline-block; white-space:nowrap}
+.bcs-ink{display:inline-block}
+.bcs-script{display:block; overflow:visible}
+.bcs-sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+/* Cup: coffee layer (rises from the bottom) under the outline layer */
+.bcs-cup{position:relative; display:block; flex:none; width:19px; height:27px; color:#000; margin-left:2px}
+.bcs-cup svg{position:absolute; left:0; bottom:0; width:100%; height:100%; display:block}
+.bcs-cup-fill{position:absolute; left:0; right:0; bottom:0; height:100%; overflow:hidden}
+.bcs-cup-fill svg{height:auto; aspect-ratio:884/1279}
+
+/* Small cup button (data-bc-support-jump): scrolls to the big button. Cup fills on hover; loops on touch screens */
+.bcs-jump{--bcs-jump-bg:#fff; --bcs-jump-border:#cfcfcf; --bcs-jump-hover:#f3f3f3; --bcs-jump-icon:#0D0C22; --bcs-focus:#4a78c2;
+  display:inline-flex; align-items:center; justify-content:center; width:36px; height:34px; padding:0; border-radius:7px;
+  border:1px solid var(--bcs-jump-border); background:var(--bcs-jump-bg); color:var(--bcs-jump-icon); cursor:pointer;
+  transition:background .15s, border-color .15s; -webkit-tap-highlight-color:transparent}
+.bcs-jump:hover{background:var(--bcs-jump-hover)}
+.bcs-jump:focus-visible{outline:2px solid var(--bcs-focus); outline-offset:1px}
+[data-theme="dark"] .bcs-jump, .bcs-jump[data-theme="dark"]{--bcs-jump-bg:#0b1729; --bcs-jump-border:#2b4570; --bcs-jump-hover:#1a2f52; --bcs-jump-icon:#e7edf7; --bcs-focus:#7aa7ff}
+@media (prefers-color-scheme:dark){ .bcs-jump[data-theme="auto"]{--bcs-jump-bg:#0b1729; --bcs-jump-border:#2b4570; --bcs-jump-hover:#1a2f52; --bcs-jump-icon:#e7edf7; --bcs-focus:#7aa7ff} }
+.bcs-jump .bcs-cup{width:13px; height:18px; margin:0; color:inherit}
+@keyframes bcsCupFill{0%,12%{height:7.9%} 68%{height:56.4%} 100%{height:56.4%}}
+.bcs-jump:hover .bcs-cup-fill,.bcs-jump:focus-visible .bcs-cup-fill{animation:bcsCupFill 2.2s cubic-bezier(.45,.05,.35,1) infinite}
+@media (hover:none),(pointer:coarse){ .bcs-jump .bcs-cup-fill{animation:bcsCupFill 2.2s cubic-bezier(.45,.05,.35,1) infinite} }
+
+/* Personal links */
+.bcs-links{margin:-2px 0 0; font-size:12px; color:var(--bcs-faint); display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap}
+.bcs-links a{color:var(--bcs-muted); text-decoration:none; border-radius:4px; padding:2px 3px; transition:color .2s}
+.bcs-links a:hover{color:var(--bcs-hover); text-decoration:underline; text-underline-offset:3px}
+.bcs-links a:focus-visible{outline:2px solid var(--bcs-focus); outline-offset:1px}
+
+/* 6 s loop: developer fades in -> lettering is hand-written -> cup fills -> hold -> fade out -> repeat */
+.bcs-dev{animation:bcsDev 6s ease infinite}
+.bcs-ink{animation:bcsInk 6s ease infinite}
+.bcs-btn .bcs-cup .bcs-cup-outline{animation:bcsOutline 6s ease infinite}
+.bcs-btn .bcs-cup .bcs-cup-fill{animation:bcsFill 6s cubic-bezier(.45,.05,.35,1) infinite}
+.bcs-dev,.bcs-ink,.bcs-btn .bcs-cup-fill,.bcs-btn .bcs-cup-outline{will-change:opacity}
+/* support.js drives the loop from one clock; it adds .bcs-js, which turns these CSS animations off */
+.bcs-btn.bcs-js .bcs-dev,.bcs-btn.bcs-js .bcs-ink,.bcs-btn.bcs-js .bcs-cup-fill,.bcs-btn.bcs-js .bcs-cup-outline,.bcs-btn.bcs-js .bcs-g{animation:none!important}
+@keyframes bcsDev{0%{opacity:0} 9%{opacity:1} 90%{opacity:1} 100%{opacity:0}}
+@keyframes bcsInk{0%,90%{opacity:1} 100%{opacity:0}}
+@keyframes bcsOutline{0%,50%{opacity:0} 55%{opacity:1} 90%{opacity:1} 100%{opacity:0}}
+@keyframes bcsFill{0%,56%{height:7.9%;opacity:1} 80%{height:56.4%;opacity:1} 90%{height:56.4%;opacity:1} 100%{height:56.4%;opacity:0}}
+
+/* Hand-writing: each letter's outline is traced with a pen line, then filled with ink */
+.bcs-script .bcs-g{fill:#000; stroke:#000; stroke-width:16; stroke-linejoin:round; stroke-linecap:round;
+  stroke-dasharray:1; stroke-dashoffset:0; fill-opacity:1;
+  animation-duration:6s; animation-iteration-count:infinite; animation-timing-function:linear}
+.bcs-g0{animation-name:bcsW0}
+.bcs-g1{animation-name:bcsW1}
+.bcs-g2{animation-name:bcsW2}
+.bcs-g3{animation-name:bcsW3}
+.bcs-g4{animation-name:bcsW4}
+.bcs-g5{animation-name:bcsW5}
+.bcs-g6{animation-name:bcsW6}
+.bcs-g7{animation-name:bcsW7}
+.bcs-g8{animation-name:bcsW8}
+.bcs-g9{animation-name:bcsW9}
+.bcs-g10{animation-name:bcsW10}
+@keyframes bcsW0{0%,10.00%{stroke-dashoffset:1;fill-opacity:0} 14.94%{stroke-dashoffset:0;fill-opacity:0} 18.94%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW1{0%,14.94%{stroke-dashoffset:1;fill-opacity:0} 18.50%{stroke-dashoffset:0;fill-opacity:0} 22.50%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW2{0%,18.50%{stroke-dashoffset:1;fill-opacity:0} 21.92%{stroke-dashoffset:0;fill-opacity:0} 25.92%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW3{0%,21.92%{stroke-dashoffset:1;fill-opacity:0} 27.20%{stroke-dashoffset:0;fill-opacity:0} 31.20%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW4{0%,27.20%{stroke-dashoffset:1;fill-opacity:0} 30.06%{stroke-dashoffset:0;fill-opacity:0} 34.06%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW5{0%,30.06%{stroke-dashoffset:1;fill-opacity:0} 33.80%{stroke-dashoffset:0;fill-opacity:0} 37.80%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW6{0%,33.80%{stroke-dashoffset:1;fill-opacity:0} 36.59%{stroke-dashoffset:0;fill-opacity:0} 40.59%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW7{0%,36.59%{stroke-dashoffset:1;fill-opacity:0} 40.14%{stroke-dashoffset:0;fill-opacity:0} 44.14%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW8{0%,40.14%{stroke-dashoffset:1;fill-opacity:0} 44.28%{stroke-dashoffset:0;fill-opacity:0} 48.28%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW9{0%,44.28%{stroke-dashoffset:1;fill-opacity:0} 47.14%{stroke-dashoffset:0;fill-opacity:0} 51.14%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+@keyframes bcsW10{0%,47.14%{stroke-dashoffset:1;fill-opacity:0} 50.00%{stroke-dashoffset:0;fill-opacity:0} 54.00%{stroke-dashoffset:0;fill-opacity:1} 100%{stroke-dashoffset:0;fill-opacity:1}}
+
+/* Highlight (BCSupport.highlight): one gentle grow + a ripple that starts at the border and fades */
+.bcs-btn.bcs-pulse{animation:bcsPulse 1.1s cubic-bezier(.3,.7,.4,1) 1}
+@keyframes bcsPulse{
+  0%  {transform:none;        box-shadow:0 1px 2px rgba(190,190,190,.5), 0 0 0 0 rgba(255,221,0,.6)}
+  35% {transform:scale(1.03); box-shadow:0 1px 2px rgba(190,190,190,.5), 0 0 0 4px rgba(255,221,0,.35)}
+  100%{transform:none;        box-shadow:0 1px 2px rgba(190,190,190,.5), 0 0 0 9px rgba(255,221,0,0)}
+}
+
+/* Reduced motion: no animation, everything shown complete */
+@media (prefers-reduced-motion:reduce){
+  .bcs *,.bcs *::before,.bcs *::after,.bcs-jump *{animation:none!important; transition:none!important}
+}

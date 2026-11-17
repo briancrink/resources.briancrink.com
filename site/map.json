@@ -803,6 +803,19 @@
           }
         },
         {
+          "title": "LovingPals",
+          "path": "/lovingpals",
+          "url": "https://business.briancrink.com/lovingpals",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Software"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Opportunity",
           "path": "/opportunity",
           "url": "https://business.briancrink.com/opportunity",
@@ -3710,39 +3723,13 @@
       },
       "pages": [
         {
-          "title": "Adopt a Cat",
-          "path": "/adopt/cat",
-          "url": "https://template.briancrink.com/adopt/cat",
+          "title": "Invoice Template",
+          "path": "/invoice",
+          "url": "https://template.briancrink.com/invoice",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
-            "category": "Development"
-          },
-          "availability": {
-            "status": "live"
-          }
-        },
-                {
-          "title": "Adopt a Dog",
-          "path": "/adopt/dog",
-          "url": "https://template.briancrink.com/adopt/dog",
-          "dev": {
-            "status": "in-development",
-            "version": "v1.0.0",
-            "category": "Development"
-          },
-          "availability": {
-            "status": "live"
-          }
-        },
-                {
-          "title": "Adopt a Pet",
-          "path": "/adopt/pet",
-          "url": "https://template.briancrink.com/adopt/pet",
-          "dev": {
-            "status": "in-development",
-            "version": "v1.0.0",
-            "category": "Development"
+            "category": "Business"
           },
           "availability": {
             "status": "live"
@@ -3810,6 +3797,19 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "LovingPals.com",
+          "path": "/lovingpals",
+          "url": "https://websites.briancrink.com/lovingpals",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
             "category": "Site"
           },
           "availability": {
