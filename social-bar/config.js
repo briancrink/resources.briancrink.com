@@ -2,7 +2,7 @@ window.SocialBarConfig = {
   desktop: { position: "right", align: "center" },
   mobile:  { position: "bottom", align: "right" },
   border: "darker",
-  tooltip: { color: "#00ff9d", background: "#00ff9d1c" },
+  tooltip: { color: "#ffffff", background: "#6b6b6b3a" },
   icons: {
     instagram: { url: "https://instagram.com/briancrink", label: "@briancrink" },
     x:         { url: "https://x.com/briancrink", label: "@briancrink", "border": "darker" },
