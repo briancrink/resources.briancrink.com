@@ -1848,7 +1848,7 @@
           }
         },
         {
-          "title": "Job Roles",
+          "title": "Roles",
           "path": "/#roles",
           "url": "https://hire.briancrink.com/#roles",
           "dev": {
@@ -1861,7 +1861,7 @@
           }
         },
         {
-          "title": "Job Services",
+          "title": "Services",
           "path": "/#services",
           "url": "https://hire.briancrink.com/#services",
           "dev": {
