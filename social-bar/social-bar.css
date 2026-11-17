@@ -1,0 +1,402 @@
+/* Social Bar. Styles stay inside the widget shadow root.
+   Layout is driven by attributes the script sets on .lp-social:
+     data-mode  = desktop | mobile
+     data-pos   = left | right | top | bottom
+     data-align = start | center | end
+   Per-icon colors come in as --lp-bg (fill) and --lp-ring (border). */
+
+.lp-social {
+  --lp-size: 46px;
+  --lp-glyph: 22px;
+  --lp-gap: 11px;
+  --lp-offset: 16px;
+  --lp-tip-gap: 20px;
+
+  position: fixed;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--lp-gap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  /* Own compositing layer: keeps the bar steady while the page scrolls and
+     while phone toolbars collapse and expand. */
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* ---------- Mobile: smaller icons ---------- */
+
+.lp-social[data-mode="mobile"] {
+  --lp-size: 36px;
+  --lp-glyph: 17px;
+  --lp-gap: 6px;
+  --lp-offset: 12px;
+  /* Room for the icon border and shadow inside the scroll area. */
+  padding: 6px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+/* While icons are magnified, let them grow past the bar's edge instead of
+   being clipped by the scroll area. */
+.lp-social.is-live {
+  overflow: visible;
+}
+
+/* A finger sliding along the open bar drives the magnify effect, so the
+   browser must not treat it as a page scroll. */
+.lp-social:not([data-stack="closed"]) {
+  touch-action: none;
+}
+
+/* ---------- Optional dock behind the icons (off by default) ---------- */
+
+.lp-social[data-dock="on"] {
+  padding: 8px;
+  border-radius: 999px;
+  background: var(--lp-dock-bg, rgba(255, 255, 255, 0.92));
+  -webkit-backdrop-filter: var(--lp-dock-blur, none);
+  backdrop-filter: var(--lp-dock-blur, none);
+  box-shadow: 0 10px 24px -14px rgba(18, 48, 74, 0.45);
+}
+
+.lp-social[data-mode="mobile"]::-webkit-scrollbar { display: none; }
+
+.lp-social[data-mode="mobile"][data-pos="bottom"] { --lp-offset: 18px; }
+
+/* ---------- Orientation ---------- */
+
+.lp-social[data-pos="left"],
+.lp-social[data-pos="right"] {
+  flex-direction: column;
+  max-height: calc(100% - 2 * var(--lp-offset));
+}
+
+.lp-social[data-pos="top"],
+.lp-social[data-pos="bottom"] {
+  flex-direction: row;
+  max-width: calc(100% - 2 * var(--lp-offset));
+}
+
+/* ---------- Edge ---------- */
+
+.lp-social[data-pos="right"] { right: calc(var(--lp-offset) + env(safe-area-inset-right, 0px)); }
+.lp-social[data-pos="left"] { left: calc(var(--lp-offset) + env(safe-area-inset-left, 0px)); }
+.lp-social[data-pos="top"] { top: calc(var(--lp-offset) + env(safe-area-inset-top, 0px)); }
+.lp-social[data-pos="bottom"] { bottom: calc(var(--lp-offset) + env(safe-area-inset-bottom, 0px)); }
+
+/* ---------- Alignment along the edge ---------- */
+
+.lp-social[data-pos="left"][data-align="center"],
+.lp-social[data-pos="right"][data-align="center"] {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.lp-social[data-pos="left"][data-align="start"],
+.lp-social[data-pos="right"][data-align="start"] {
+  top: calc(var(--lp-offset) + env(safe-area-inset-top, 0px));
+}
+
+.lp-social[data-pos="left"][data-align="end"],
+.lp-social[data-pos="right"][data-align="end"] {
+  bottom: calc(var(--lp-offset) + env(safe-area-inset-bottom, 0px));
+}
+
+.lp-social[data-pos="top"][data-align="center"],
+.lp-social[data-pos="bottom"][data-align="center"] {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.lp-social[data-pos="top"][data-align="start"],
+.lp-social[data-pos="bottom"][data-align="start"] {
+  left: calc(var(--lp-offset) + env(safe-area-inset-left, 0px));
+}
+
+.lp-social[data-pos="top"][data-align="end"],
+.lp-social[data-pos="bottom"][data-align="end"] {
+  right: calc(var(--lp-offset) + env(safe-area-inset-right, 0px));
+}
+
+/* ---------- iPhone / iPad Safari: steady while the toolbar moves ----------
+   Safari resizes the viewport in steps while its toolbar collapses and expands
+   during a scroll. Anything pinned to the bottom (or to 50% of the height)
+   follows those steps and looks choppy. The top of the screen never moves, so
+   on iOS the bar is placed from the top instead, using the small viewport
+   height (100svh = the height with the toolbar showing). It then sits just
+   above the toolbar and stays perfectly still when the toolbar hides.
+   (-webkit-touch-callout is only supported by iOS Safari.) */
+
+@supports (-webkit-touch-callout: none) and (height: 100svh) {
+  .lp-social[data-pos="bottom"],
+  .lp-social[data-pos="left"][data-align="end"],
+  .lp-social[data-pos="right"][data-align="end"] {
+    bottom: auto;
+    top: calc(100svh - var(--lp-offset) - env(safe-area-inset-bottom, 0px));
+  }
+
+  .lp-social[data-pos="bottom"][data-align="center"] {
+    transform: translate3d(-50%, -100%, 0);
+  }
+
+  .lp-social[data-pos="bottom"][data-align="start"],
+  .lp-social[data-pos="bottom"][data-align="end"],
+  .lp-social[data-pos="left"][data-align="end"],
+  .lp-social[data-pos="right"][data-align="end"] {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .lp-social[data-pos="left"][data-align="center"],
+  .lp-social[data-pos="right"][data-align="center"] {
+    top: 50svh;
+  }
+}
+
+/* ---------- Per-device visibility ---------- */
+
+.lp-social[data-mode="mobile"] .lp-social__link[data-show="desktop"],
+.lp-social[data-mode="desktop"] .lp-social__link[data-show="mobile"] {
+  display: none;
+}
+
+/* ---------- Icon ---------- */
+
+.lp-social__link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--lp-size);
+  height: var(--lp-size);
+  flex: 0 0 var(--lp-size);
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  /* "backwards" (not "both") so the finished intro never overrides the
+     transforms the stack layout sets. */
+  animation: lp-social-in-up 520ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.lp-social__link:nth-child(2) { animation-delay: 40ms; }
+.lp-social__link:nth-child(3) { animation-delay: 80ms; }
+.lp-social__link:nth-child(4) { animation-delay: 120ms; }
+.lp-social__link:nth-child(5) { animation-delay: 160ms; }
+.lp-social__link:nth-child(6) { animation-delay: 200ms; }
+.lp-social__link:nth-child(7) { animation-delay: 240ms; }
+.lp-social__link:nth-child(8) { animation-delay: 280ms; }
+
+.lp-social[data-pos="right"] .lp-social__link { animation-name: lp-social-in-right; }
+.lp-social[data-pos="left"] .lp-social__link { animation-name: lp-social-in-left; }
+.lp-social[data-pos="top"] .lp-social__link { animation-name: lp-social-in-down; }
+.lp-social[data-pos="bottom"] .lp-social__link { animation-name: lp-social-in-up; }
+
+.lp-social__jelly {
+  display: grid;
+  place-items: center;
+  width: var(--lp-size);
+  height: var(--lp-size);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--lp-bg, #12304a);
+  box-shadow:
+    0 0 0 var(--lp-ring-w, 2px) var(--lp-ring, transparent),
+    0 8px 16px -8px rgba(18, 48, 74, 0.55);
+  transform-origin: center center;
+  will-change: transform;
+  /* The jelly grows and squashes. If it could catch the mouse, the hit area
+     would change under the pointer and the icon would shake at its edge.
+     Only the fixed-size link box receives pointer events. */
+  pointer-events: none;
+}
+
+.lp-social__jelly svg {
+  display: block;
+  width: var(--lp-glyph);
+  height: var(--lp-glyph);
+  pointer-events: none;
+}
+
+.lp-social[data-mode="mobile"] .lp-social__jelly {
+  box-shadow:
+    0 0 0 var(--lp-ring-w, 2px) var(--lp-ring, transparent),
+    0 5px 10px -6px rgba(18, 48, 74, 0.45);
+}
+
+.lp-social__link:focus-visible .lp-social__jelly {
+  box-shadow:
+    0 0 0 var(--lp-ring-w, 2px) var(--lp-ring, transparent),
+    0 0 0 calc(var(--lp-ring-w, 2px) + 3px) #2563c9,
+    0 8px 16px -8px rgba(18, 48, 74, 0.55);
+}
+
+.lp-social__link:active .lp-social__jelly {
+  filter: brightness(0.94);
+}
+
+/* ---------- Stack layout ---------- */
+
+/* Icons glide between the deck and the bar. */
+.lp-social[data-layout="stack"] .lp-social__link {
+  animation: none;
+  transform-origin: 50% 50%;
+  transition:
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1) calc(var(--lp-i, 0) * 24ms),
+    opacity 320ms ease calc(var(--lp-i, 0) * 24ms);
+}
+
+
+
+
+.lp-social[data-layout="stack"].is-ready {
+  animation: lp-social-fade 360ms ease both;
+}
+
+/* Closed: only the top card is touchable; the bar's empty area lets taps through. */
+.lp-social[data-stack="closed"] {
+  pointer-events: none;
+  overflow: visible;
+}
+
+.lp-social[data-stack="closed"] .lp-social__link {
+  pointer-events: none;
+}
+
+.lp-social[data-stack="closed"] .lp-social__link[data-stack-role="top"] {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.lp-social[data-stack="closed"] .lp-social__link[data-stack-role="back"] .lp-social__jelly {
+  box-shadow:
+    0 0 0 var(--lp-ring-w, 2px) var(--lp-ring, transparent),
+    0 4px 10px -6px rgba(18, 48, 74, 0.5);
+}
+
+.lp-social[data-stack="closed"] .lp-social__link[data-stack-role="hidden"] {
+  opacity: 0;
+}
+
+.lp-social[data-stack="closed"] .lp-social__tip {
+  display: none;
+}
+
+/* A dock only appears once the stack opens into a bar. */
+.lp-social[data-dock="on"][data-stack="closed"] {
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Used for the first layout and for resizes, so nothing animates on load. */
+.lp-social.is-instant,
+.lp-social.is-instant .lp-social__link {
+  transition: none !important;
+}
+
+/* ---------- Tooltip (desktop only) ---------- */
+
+.lp-social__tip {
+  position: absolute;
+  z-index: 2;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #12304a;
+  color: #fbfdff;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 8px 18px -12px rgba(18, 48, 74, 0.7);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.lp-social[data-pos="right"] .lp-social__tip {
+  top: 50%;
+  right: calc(100% + var(--lp-tip-gap));
+  transform: translate(6px, -50%);
+}
+
+.lp-social[data-pos="left"] .lp-social__tip {
+  top: 50%;
+  left: calc(100% + var(--lp-tip-gap));
+  transform: translate(-6px, -50%);
+}
+
+.lp-social[data-pos="bottom"] .lp-social__tip {
+  left: 50%;
+  bottom: calc(100% + var(--lp-tip-gap));
+  transform: translate(-50%, 6px);
+}
+
+.lp-social[data-pos="top"] .lp-social__tip {
+  left: 50%;
+  top: calc(100% + var(--lp-tip-gap));
+  transform: translate(-50%, -6px);
+}
+
+.lp-social[data-pos="left"] .lp-social__link:hover .lp-social__tip,
+.lp-social[data-pos="left"] .lp-social__link:focus-visible .lp-social__tip,
+.lp-social[data-pos="right"] .lp-social__link:hover .lp-social__tip,
+.lp-social[data-pos="right"] .lp-social__link:focus-visible .lp-social__tip {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.lp-social[data-pos="top"] .lp-social__link:hover .lp-social__tip,
+.lp-social[data-pos="top"] .lp-social__link:focus-visible .lp-social__tip,
+.lp-social[data-pos="bottom"] .lp-social__link:hover .lp-social__tip,
+.lp-social[data-pos="bottom"] .lp-social__link:focus-visible .lp-social__tip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.lp-social[data-mode="mobile"] .lp-social__tip { display: none; }
+
+/* ---------- Motion ---------- */
+
+@keyframes lp-social-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lp-social-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes lp-social-in-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes lp-social-in-right {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes lp-social-in-left {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-social__link { animation: none; }
+  .lp-social[data-layout="stack"] .lp-social__link { transition-duration: 1ms !important; }
+  .lp-social__jelly,
+  .lp-social__tip { transition: none; }
+}
