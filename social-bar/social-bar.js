@@ -1,7 +1,9 @@
 /**
- * Social Bar.
- * Drop-in: <script src="social-bar/briancrink-social-bar.js" defer></script>
- * Config (later wins): file defaults < #lp-social-config JSON < window.domainSocial < data-* on this script.
+ * Social bar: a reusable, brand-free social media icon bar.
+ * Drop-in: <script src="social-bar/config.js" defer></script>
+ *          <script src="social-bar/social-bar.js" defer></script>
+ * Config (later wins): file defaults < #social-bar-config JSON < window.SocialBarConfig < data-* on this script.
+ * All brand details (links, labels, colors) belong in the config, not in this file.
  * Glyphs for Instagram, X, Threads, and Discord use Simple Icons paths (CC0).
  */
 (function () {
@@ -16,25 +18,27 @@
   // `color` is the icon fill. `base` is the solid color used to work out a
   // relative border when the fill is a gradient.
   var ITEMS = [
-    { id: "instagram", label: "@briancrink", color: "linear-gradient(140deg, #f9ce34 0%, #ee2a7b 48%, #6228d7 100%)", base: "#d62976" },
-    { id: "x", label: "@briancrink", color: "#111111" },
-    { id: "threads", label: "@briancrink", color: "#111111" },
-    { id: "facebook", label: "Brian Crink", color: "#1877f2" },
-    { id: "email", label: "hello@briancrink.com", color: "#12304a" },
+    { id: "instagram", label: "Instagram", color: "linear-gradient(140deg, #f9ce34 0%, #ee2a7b 48%, #6228d7 100%)", base: "#d62976" },
+    { id: "x", label: "X", color: "#111111" },
+    { id: "threads", label: "Threads", color: "#111111" },
+    { id: "facebook", label: "Facebook", color: "#1877f2" },
+    { id: "email", label: "Email", color: "#475569" },
     { id: "message", label: "Message", color: "#0e8a9a" },
     { id: "rss", label: "RSS feed", color: "#ee6c1e" },
-    { id: "discord", label: "@briancrink", color: "#5865f2" },
+    { id: "discord", label: "Discord", color: "#5865f2" },
   ];
 
+  // No links ship with the component: an icon appears once the config gives
+  // it a url. That keeps every brand detail in the config file.
   var DEFAULT_LINKS = {
-    instagram: "https://instagram.com/briancrink",
-    x: "https://x.com/briancrink",
-    threads: "https://threads.net/@briancrink",
-    facebook: "https://facebook.com/briancrink",
-    email: "mailto:hello@briancrink.com",
-    message: "sms:+10000000000",
-    rss: "/feed/feed.xml",
-    discord: "https://discord.gg/briancrink",
+    instagram: "",
+    x: "",
+    threads: "",
+    facebook: "",
+    email: "",
+    message: "",
+    rss: "",
+    discord: "",
   };
 
   // The dock is an optional backdrop behind the icons. Off by default.
@@ -44,6 +48,8 @@
     desktop: { position: "right", align: "center", layout: "bar", dock: DEFAULT_DOCK },
     mobile: { position: "bottom", align: "center", layout: "stack", dock: DEFAULT_DOCK },
     stackTimeout: 5,
+    // Tooltip ("tag") colors. Neutral by default; set your brand colors in the config.
+    tooltip: { color: "#ffffff", background: "#222222" },
     border: "darker",
     borderWidth: 2,
     breakpoint: 760,
@@ -114,7 +120,7 @@
         if (list[i].src === SCRIPT_URL) return list[i];
       }
     }
-    return document.querySelector("script[src*='social-bar']");
+    return document.querySelector("script[src*='social-bar.js']");
   }
 
   function safeHref(value) {
@@ -207,6 +213,17 @@
     if (op !== undefined) out.opacity = op;
     var blur = parseBool(value.blur);
     if (blur !== undefined) out.blur = blur;
+    return Object.keys(out).length ? out : undefined;
+  }
+
+  // tooltip: { color, background }  ("text" and "bg" also accepted)
+  function parseTooltip(value) {
+    if (!isObj(value)) return undefined;
+    var out = {};
+    var color = str(value.color !== undefined ? value.color : value.text);
+    var bg = str(value.background !== undefined ? value.background : value.bg);
+    if (color && supportsColor(color)) out.color = color;
+    if (bg && supportsBackground(bg)) out.background = bg;
     return Object.keys(out).length ? out : undefined;
   }
 
@@ -359,6 +376,9 @@
       if (c) out[mode].align = c.indexOf("top") === 0 ? "start" : "end";
     });
 
+    var tip = parseTooltip(src.tooltip);
+    if (tip) out.tooltip = tip;
+
     if (str(src.border)) out.border = str(src.border);
     if (src.borderWidth !== undefined && !isNaN(parseFloat(src.borderWidth))) out.borderWidth = parseFloat(src.borderWidth);
     if (src.breakpoint !== undefined && !isNaN(parseFloat(src.breakpoint))) out.breakpoint = parseFloat(src.breakpoint);
@@ -391,7 +411,7 @@
     if (isObj(src.icons)) {
       Object.keys(src.icons).forEach(function (id) {
         if (ITEM_IDS.indexOf(id) === -1) {
-          if (window.console) console.warn("[briancrink social bar] Unknown icon \"" + id + "\". Use one of: " + ITEM_IDS.join(", "));
+          if (window.console) console.warn("[Social Bar] Unknown icon \"" + id + "\". Use one of: " + ITEM_IDS.join(", "));
           return;
         }
         var v = src.icons[id];
@@ -405,6 +425,8 @@
         if (typeof label === "string") t.label = label;
         if (str(v.border)) t.border = str(v.border);
         if (str(v.color)) t.color = str(v.color);
+        var itip = parseTooltip(v.tooltip);
+        if (itip) t.tooltip = itip;
         var show = parseShow(v.show);
         if (show) t.show = show;
       });
@@ -432,6 +454,7 @@
     if (d.dockDesktop) src.desktop.dock = d.dockDesktop;
     if (d.dockMobile) src.mobile.dock = d.dockMobile;
     if (d.border) src.border = d.border;
+    if (d.tooltipColor || d.tooltipBackground) src.tooltip = { color: d.tooltipColor, background: d.tooltipBackground };
     if (d.borderWidth) src.borderWidth = d.borderWidth;
     if (d.breakpoint) src.breakpoint = d.breakpoint;
     if (d.zIndex) src.zIndex = d.zIndex;
@@ -458,6 +481,7 @@
     ["border", "borderWidth", "breakpoint", "zIndex", "order", "css", "stackTimeout"].forEach(function (key) {
       if (src[key] !== undefined) target[key] = src[key];
     });
+    if (src.tooltip) target.tooltip = Object.assign({}, target.tooltip || {}, src.tooltip);
     Object.keys(src.icons).forEach(function (id) {
       target.icons[id] = Object.assign({}, target.icons[id] || {}, src.icons[id]);
     });
@@ -466,12 +490,12 @@
 
   function readConfig() {
     var fromJson = {};
-    var node = document.getElementById("lp-social-config");
+    var node = document.getElementById("social-bar-config");
     if (node && node.textContent) {
       try {
         fromJson = JSON.parse(node.textContent);
       } catch (err) {
-        if (window.console) console.error("[briancrink social bar] #lp-social-config is not valid JSON:", err.message);
+        if (window.console) console.error("[Social Bar] #social-bar-config is not valid JSON:", err.message);
       }
     }
 
@@ -485,6 +509,7 @@
       order: DEFAULTS.order,
       css: DEFAULTS.css,
       stackTimeout: DEFAULTS.stackTimeout,
+      tooltip: Object.assign({}, DEFAULTS.tooltip),
       icons: {},
     };
     ITEMS.forEach(function (item) {
@@ -492,7 +517,7 @@
     });
 
     merge(result, normalize(fromJson));
-    merge(result, normalize(window.domainSocial));
+    merge(result, normalize(window.SocialBarConfig));
     merge(result, fromDataset(scriptEl()));
     return result;
   }
@@ -540,11 +565,11 @@
     var dock = place.dock || DEFAULT_DOCK;
     nav.setAttribute("data-dock", dock.show ? "on" : "off");
     if (dock.show) {
-      nav.style.setProperty("--lp-dock-bg", dockBackground(Object.assign({}, DEFAULT_DOCK, dock)));
-      nav.style.setProperty("--lp-dock-blur", dock.blur === false ? "none" : "blur(16px) saturate(1.2)");
+      nav.style.setProperty("--sb-dock-bg", dockBackground(Object.assign({}, DEFAULT_DOCK, dock)));
+      nav.style.setProperty("--sb-dock-blur", dock.blur === false ? "none" : "blur(16px) saturate(1.2)");
     } else {
-      nav.style.removeProperty("--lp-dock-bg");
-      nav.style.removeProperty("--lp-dock-blur");
+      nav.style.removeProperty("--sb-dock-bg");
+      nav.style.removeProperty("--sb-dock-blur");
     }
     var layout = place.layout || "bar";
     var changed = prev !== mode + place.position || nav.getAttribute("data-layout") !== layout;
@@ -597,14 +622,14 @@
       link.style.transform = "";
       link.style.zIndex = "";
       link.removeAttribute("data-stack-role");
-      link.style.removeProperty("--lp-i");
+      link.style.removeProperty("--sb-i");
     });
 
     var list = visibleLinks();
     var count = list.length;
     list.forEach(function (link, i) {
       // Stagger: open from the top card outward, close from the far end inward.
-      link.style.setProperty("--lp-i", String(stackOpen ? i : count - 1 - i));
+      link.style.setProperty("--sb-i", String(stackOpen ? i : count - 1 - i));
     });
 
     if (stack && !stackOpen && count && ready) {
@@ -761,7 +786,7 @@
     if (!nav) return;
     nav.classList.remove("is-live");
     links.forEach(function (link, i) {
-      var jelly = link.querySelector(".lp-social__jelly");
+      var jelly = link.querySelector(".social-bar__jelly");
       if (jelly) jelly.style.transform = "";
       if (states[i]) resetState(states[i]);
     });
@@ -789,7 +814,7 @@
     links.forEach(function (link, index) {
       var state = states[index];
       // Geometry comes from the link box, which never moves. Only the inner
-      // .lp-social__jelly is transformed, and it ignores the pointer.
+      // .social-bar__jelly is transformed, and it ignores the pointer.
       var rect = link.getBoundingClientRect();
       if (!rect.width) return;
       var target = 1;
@@ -815,7 +840,7 @@
       var lift = (state.s - 1) * 22;
       var tx = pos === "right" ? -lift : pos === "left" ? lift : 0;
       var ty = pos === "bottom" ? -lift : pos === "top" ? lift : 0;
-      var jelly = link.querySelector(".lp-social__jelly");
+      var jelly = link.querySelector(".social-bar__jelly");
       if (jelly) {
         jelly.style.transform =
           "translate(" + tx.toFixed(3) + "px," + ty.toFixed(3) + "px) scale(" + sx.toFixed(4) + "," + sy.toFixed(4) + ")";
@@ -851,7 +876,7 @@
     if (!nav) return null;
     var root = nav.getRootNode();
     var el = root && root.elementFromPoint ? root.elementFromPoint(x, y) : null;
-    return el && el.closest ? el.closest(".lp-social__link") : null;
+    return el && el.closest ? el.closest(".social-bar__link") : null;
   }
 
   // Squash-and-settle "jelly" on the icon the pointer or finger just reached.
@@ -979,7 +1004,7 @@
     nav = null;
     links = [];
     states = [];
-    document.documentElement.classList.remove("lp-social-on");
+    document.documentElement.classList.remove("social-bar-on");
   }
 
   function buildLink(item, icon) {
@@ -988,7 +1013,7 @@
 
     var label = typeof icon.label === "string" && icon.label.trim() ? icon.label : item.label;
     var anchor = document.createElement("a");
-    anchor.className = "lp-social__link";
+    anchor.className = "social-bar__link";
     anchor.href = href;
     anchor.setAttribute("aria-label", label);
     anchor.setAttribute("data-show", icon.show || "both");
@@ -998,28 +1023,30 @@
     }
 
     var jelly = document.createElement("span");
-    jelly.className = "lp-social__jelly";
+    jelly.className = "social-bar__jelly";
     jelly.setAttribute("data-net", item.id);
 
     var fill = icon.color && supportsBackground(icon.color) ? icon.color : item.color;
-    jelly.style.setProperty("--lp-bg", fill);
+    jelly.style.setProperty("--sb-bg", fill);
 
     // Base for "darker"/"lighter": the custom fill if it is a plain color,
     // otherwise the network's solid brand color.
     var base = item.base || item.color;
     if (icon.color && icon.color !== item.color && supportsColor(icon.color)) base = icon.color;
     var ring = ringColor(icon.border || cfg.border, base);
-    if (ring) jelly.style.setProperty("--lp-ring", ring);
-    else jelly.style.setProperty("--lp-ring-w", "0px");
+    if (ring) jelly.style.setProperty("--sb-ring", ring);
+    else jelly.style.setProperty("--sb-ring-w", "0px");
 
     // width/height attributes keep the glyph small even before the stylesheet applies.
     jelly.innerHTML =
       '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">' + ICONS[item.id] + "</svg>";
 
     var tip = document.createElement("span");
-    tip.className = "lp-social__tip";
+    tip.className = "social-bar__tip";
     tip.setAttribute("aria-hidden", "true");
     tip.textContent = label;
+    if (icon.tooltip && icon.tooltip.color) tip.style.setProperty("--sb-tip-color", icon.tooltip.color);
+    if (icon.tooltip && icon.tooltip.background) tip.style.setProperty("--sb-tip-bg", icon.tooltip.background);
 
     anchor.appendChild(jelly);
     anchor.appendChild(tip);
@@ -1035,7 +1062,7 @@
     ownedHost = !mountHost;
     if (!mountHost) {
       mountHost = document.createElement("div");
-      mountHost.id = "lp-social-host";
+      mountHost.id = "social-bar-host";
       mountHost.style.cssText = "position:fixed;inset:0;z-index:" + cfg.zIndex + ";pointer-events:none;";
       (document.body || document.documentElement).appendChild(mountHost);
     }
@@ -1046,7 +1073,7 @@
     // Keep the bar invisible until its stylesheet has loaded. Without this the
     // raw SVGs paint at full size in link-blue for a frame or two.
     var guard = document.createElement("style");
-    guard.textContent = ".lp-social:not(.is-ready){visibility:hidden!important;}";
+    guard.textContent = ".social-bar:not(.is-ready){visibility:hidden!important;}";
     shadow.appendChild(guard);
 
     var styleLink = document.createElement("link");
@@ -1054,9 +1081,11 @@
     styleLink.href = cssHref(cfg.css);
 
     nav = document.createElement("nav");
-    nav.className = "lp-social";
+    nav.className = "social-bar";
     nav.setAttribute("aria-label", "Social media");
-    nav.style.setProperty("--lp-ring-w", cfg.borderWidth + "px");
+    nav.style.setProperty("--sb-ring-w", cfg.borderWidth + "px");
+    nav.style.setProperty("--sb-tip-color", cfg.tooltip.color);
+    nav.style.setProperty("--sb-tip-bg", cfg.tooltip.background);
 
     var currentNav = nav;
     var reveal = function () {
@@ -1091,21 +1120,21 @@
 
     shadow.appendChild(nav);
     applyLayout();
-    links = Array.prototype.slice.call(nav.querySelectorAll(".lp-social__link"));
+    links = Array.prototype.slice.call(nav.querySelectorAll(".social-bar__link"));
     states = links.map(function () {
       return { s: 1, vs: 0, jx: 1, jy: 1, vjx: 0, vjy: 0 };
     });
-    document.documentElement.classList.add("lp-social-on");
+    document.documentElement.classList.add("social-bar-on");
     bindMotion();
     bindStack();
   }
 
   function remount(patch) {
-    window.briancrinkSocial = Object.assign({}, window.briancrinkSocial || {}, patch);
+    window.SocialBarConfig = Object.assign({}, window.SocialBarConfig || {}, patch);
     mount(host && !ownedHost ? host : undefined);
   }
 
-  window.briancrinkSocialBar = {
+  window.SocialBar = {
     mount: mount,
     destroy: destroy,
     // e.g. setPosition("left") or setPosition({ desktop: "left", mobile: "bottom" })

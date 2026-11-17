@@ -1,51 +1,57 @@
-# briancrink social bar
+# Social bar
 
-One script tag. Circle icons. Desktop and mobile each get their own position (left, right, top, bottom, or center).
+A reusable social media icon bar for any website. Two script tags. Circle icons. Nothing in the component is tied to one brand: links, labels and colors all come from your `config.js`. Desktop and mobile each get their own position (an edge, a corner, or center) and layout.
 
 Hovering with a mouse uses a small spring: the icon under the pointer grows, squashes like jelly, then settles, and its neighbors grow a little, like the macOS dock. This works at any window width. On touch screens, slide a finger along the open bar to get the same effect, then lift your finger to open the icon underneath it. On phones the icons start folded into a small **stack**, like a deck of cards: one icon in front, the rest peeking out around it. Tap it and it opens into the bar. By default there's no background behind the icons; you can turn on a dock (see **Dock** below).
 
 ## Add it to any page
 
-Put this folder in the site (or add the repo as a git submodule named `social-bar`), then add this before `</body>`:
+1. Put the `social-bar` folder in your site (or in a shared repo you add as a git submodule).
+2. Create a `config.js` with your brand's details. This is the only file with anything brand-specific in it:
+
+```js
+window.SocialBarConfig = {
+  desktop: { position: "right",  align: "center" },
+  mobile:  { position: "bottom", align: "center" },
+
+  border: "darker",
+  tooltip: { color: "#ffffff", background: "#1e293b" },
+
+  icons: {
+    instagram: { url: "https://www.instagram.com/yourbrand/", label: "@yourbrand" },
+    x:         { url: "https://x.com/yourbrand",              label: "@yourbrand" },
+    threads:   { url: "https://www.threads.net/@yourbrand",   label: "@yourbrand", show: "desktop" },
+    facebook:  { url: "https://www.facebook.com/yourbrand",   label: "Your Brand" },
+    email:     { url: "mailto:hello@example.com",              label: "hello@example.com" },
+    rss:       { url: "/feed.xml",                             label: "RSS feed" },
+    discord:   { url: "https://discord.gg/yourserver",         label: "Join our Discord" },
+  },
+};
+```
+
+3. Load both files before `</body>`, config first:
 
 ```html
-<script type="application/json" id="lp-social-config">
-{
-  "desktop": { "position": "left",  "align": "center" },
-  "mobile":  { "position": "bottom", "align": "center" },
-
-  "border": "darker",
-  "borderWidth": 2,
-
-  "icons": {
-    "instagram": { "url": "https://www.instagram.com/yourclinic/", "label": "@yourclinic" },
-    "x":         { "url": "https://x.com/yourclinic",              "label": "@yourclinic" },
-    "threads":   { "url": "https://www.threads.net/@yourclinic",   "label": "@yourclinic", "show": "desktop" },
-    "facebook":  { "url": "https://www.facebook.com/yourclinic",   "label": "Your Clinic", "border": "lighter" },
-    "email":     { "url": "mailto:hello@yourclinic.org",            "label": "hello@yourclinic.org" },
-    "message":   { "url": "sms:+16165550100",                       "label": "Text us" },
-    "rss":       { "url": "/feed.xml",                       "label": "RSS feed", "show": true },
-    "discord":   { "url": "https://discord.gg/yourserver",          "label": "Join our Discord", "border": "#ffffff" }
-  }
-}
-</script>
+<script src="social-bar/config.js" defer></script>
 <script src="social-bar/social-bar.js" defer></script>
 ```
 
-The config block can go anywhere on the page. The script reads it after the page has loaded.
+Scripts marked `defer` run in the order they appear, so the config is always ready when the bar starts. The bar finds its stylesheet (`social-bar.css`) next to its script automatically.
+
+**Paths:** a relative `src` like `social-bar/config.js` is resolved from the page's own folder, so a page in a subfolder needs `../social-bar/...`. Paths that start with `/` (for example `/social-bar/config.js`) work from any page. The same goes for relative `url` values in the config, such as an RSS feed.
 
 ## Turning icons on or off
 
-All eight icons are **on by default**: `instagram`, `x`, `threads`, `facebook`, `email`, `message`, `rss`, `discord`. Each one uses the URL and label stored in the script until you override it.
+The component ships with **no links**. An icon appears once your config gives it a `url`, so only the networks you list show up. The available icons are `instagram`, `x`, `threads`, `facebook`, `email`, `message`, `rss` and `discord`.
 
-Use `show` on any icon:
+To hide an icon that has a url, or show it on one device only, use `show`:
 
-```json
-"icons": {
-  "rss":     { "show": true },
-  "discord": { "show": false },
-  "threads": { "show": "desktop" },
-  "message": { "show": "mobile" }
+```js
+icons: {
+  rss:     { url: "/feed.xml", show: true },
+  discord: { url: "https://discord.gg/yourserver", show: false },
+  threads: { url: "https://www.threads.net/@yourbrand", show: "desktop" },
+  message: { url: "sms:+15555550100", show: "mobile" },
 }
 ```
 
@@ -56,15 +62,7 @@ Use `show` on any icon:
 | `"desktop"` | Desktop only |
 | `"mobile"` | Mobile only |
 
-An icon also hides if its `url` is an empty string (`"url": ""`).
-
-**RSS:** it is on by default and points to `/feed.xml`. To point it somewhere else, set its URL:
-
-```json
-"rss": { "url": "/blog/feed.xml", "label": "RSS feed" }
-```
-
-To turn it off, use `"rss": { "show": false }`.
+An icon with no `url`, or an empty one (`url: ""`), is always hidden.
 
 With `data-*` attributes on the script tag: `data-rss-show="false"` hides RSS and `data-rss-show="true"` shows it.
 
@@ -175,14 +173,34 @@ Each one under `"icons"` accepts:
 | Field | What it does |
 |---|---|
 | `url` | Link target. `https://`, `mailto:`, `sms:`, `tel:`, or a relative path like `/feed.xml`. An empty string hides the icon. `javascript:` URLs are ignored. |
-| `label` | The tooltip text and screen-reader name, such as `@yourclinic`. |
+| `label` | The tooltip text and screen-reader name, such as `@yourbrand`. Without one, the network's name is used ("Instagram", "Email", ...). |
 | `border` | Border color for this icon (see below). Overrides the global `border`. |
 | `show` | `true` (default), `false`, `"desktop"` (desktop only), or `"mobile"` (mobile only). |
-| `color` | Optional. Replaces the icon's fill color, for example `"#2a9d8f"`. |
+| `color` | Optional. Replaces the icon's fill color, for example `"#2a9d8f"`. The email icon defaults to a neutral slate, so this is how you give it your brand color. |
+| `tooltip` | Optional. Tooltip colors for this icon only, e.g. `{ color: "#000", background: "#ffd400" }`. Overrides the global `tooltip`. |
 
-A short form also works: `"x": "https://x.com/yourclinic"` sets just the URL.
+A short form also works: `x: "https://x.com/yourbrand"` sets just the URL.
 
-Icons you leave out keep the defaults in the script file and stay on (see **Turning icons on or off** above). Use `"order": ["email", "instagram", "facebook"]` to change the order. Icons you don't list stay in their usual order after the ones you do.
+Icons you leave out don't appear (see **Turning icons on or off** above). Use `"order": ["email", "instagram", "facebook"]` to change the order. Icons you don't list stay in their usual order after the ones you do.
+
+## Tooltip colors
+
+On desktop, hovering an icon shows its `label` in a small tooltip ("tag"). Set its text and background colors once for all icons:
+
+```js
+tooltip: { color: "#ffffff", background: "#1e293b" }
+```
+
+| Field | Values | Default |
+|---|---|---|
+| `color` | text color, any CSS color | `"#ffffff"` |
+| `background` | background, any CSS color | `"#222222"` |
+
+To give one icon different colors, put `tooltip` inside that icon (see **Icons** above).
+
+With `data-*` attributes on the script tag: `data-tooltip-color="#ffffff"` and `data-tooltip-background="#1e293b"`.
+
+Tooltips appear only with a mouse, and not while a stack is folded. Phones don't show them.
 
 ## Dock (background behind the icons)
 
@@ -195,7 +213,7 @@ By default there's no dock, just the icons. To show one:
 | Field | Values | Default |
 |---|---|---|
 | `show` | `true` / `false` | `false` |
-| `color` | any CSS color, e.g. `"#ffffff"`, `"#12304a"`, `"black"` | `"#ffffff"` |
+| `color` | any CSS color, e.g. `"#ffffff"`, `"#1e293b"`, `"black"` | `"#ffffff"` |
 | `opacity` | `0` (fully see-through) to `1` (solid), or a percentage like `"80%"` | `0.92` |
 | `blur` | `true` blurs the page behind a see-through dock (frosted glass), `false` turns that off | `true` |
 
@@ -203,12 +221,12 @@ The top-level `dock` applies to desktop and mobile. To set one device only, put 
 
 ```json
 "desktop": { "position": "left" },
-"mobile":  { "position": "bottom", "dock": { "show": true, "color": "#12304a", "opacity": 0.6 } }
+"mobile":  { "position": "bottom", "dock": { "show": true, "color": "#1e293b", "opacity": 0.6 } }
 ```
 
 Short forms: `"dock": true` turns it on with the default color, and `"dock": false` turns it off.
 
-With `data-*` attributes on the script tag: `data-dock="true"`, `data-dock-color="#12304a"`, `data-dock-opacity="0.6"`, `data-dock-blur="false"`, or `data-dock-mobile="true"` for mobile only.
+With `data-*` attributes on the script tag: `data-dock="true"`, `data-dock-color="#1e293b"`, `data-dock-opacity="0.6"`, `data-dock-blur="false"`, or `data-dock-mobile="true"` for mobile only.
 
 ## Border color
 
@@ -229,7 +247,9 @@ Set it once for every icon with `"border"`, or per icon inside `"icons"`:
 
 ## Other ways to configure
 
-Settings are applied in this order, and later ones win: script defaults → the JSON block → `window.briancrinkSocial` → `data-*` attributes on the script tag.
+Settings are applied in this order, and later ones win: script defaults → a JSON block on the page → `window.SocialBarConfig` (your `config.js`) → `data-*` attributes on the script tag.
+
+`data-*` attributes are handy for a one-off change on a single page, such as a different position, while every other page keeps using the shared `config.js`.
 
 `data-*` attributes, for quick one-off overrides:
 
@@ -240,23 +260,23 @@ Settings are applied in this order, and later ones win: script defaults → the 
   data-position-desktop="left"
   data-position-mobile="bottom"
   data-border="white"
-  data-instagram="https://instagram.com/yourusername"
-  data-instagram-label="@yourusername"
+  data-instagram="https://instagram.com/yourbrand"
+  data-instagram-label="@yourbrand"
   data-instagram-border="black"
   data-rss-show="false"
 ></script>
 ```
 
-The same settings can also go in an object, set before the script runs:
+Instead of `config.js`, the settings can also go in a JSON block on the page (JSON syntax: quoted keys, no trailing commas):
 
 ```html
-<script>
-  window.briancrinkSocial = {
-    desktop: { position: "left" },
-    icons: { x: { url: "https://x.com/yourclinic", label: "@yourclinic" } }
-  };
+<script type="application/json" id="social-bar-config">
+{ "desktop": { "position": "left" },
+  "icons": { "x": { "url": "https://x.com/yourbrand", "label": "@yourbrand" } } }
 </script>
 ```
+
+If that block isn't valid JSON, the browser console shows `#social-bar-config is not valid JSON` and the block is ignored.
 
 Older configs keep working: `"side": "left"` (desktop position), `"links": { "instagram": "…" }`, and `"labels": { "instagram": "…" }`.
 
@@ -270,12 +290,12 @@ Older configs keep working: `"side": "left"` (desktop position), `"links": { "in
 ## Script API
 
 ```js
-briancrinkSocialBar.setPosition({ desktop: "left", mobile: "bottom" });
-briancrinkSocialBar.open();     // open a stack into the bar
-briancrinkSocialBar.close();    // fold it back up
-briancrinkSocialBar.config();   // the config currently in effect
-briancrinkSocialBar.destroy();
-briancrinkSocialBar.mount();
+SocialBar.setPosition({ desktop: "left", mobile: "bottom" });
+SocialBar.open();     // open a stack into the bar
+SocialBar.close();    // fold it back up
+SocialBar.config();   // the config currently in effect
+SocialBar.destroy();
+SocialBar.mount();
 ```
 
 Add `data-manual="true"` to the script tag to stop it from mounting by itself.
@@ -284,4 +304,4 @@ Add `data-manual="true"` to the script tag to stop it from mounting by itself.
 
 - If the bar is at the bottom on phones, give the page some bottom padding there so the last line isn't covered. The bar never changes the page layout itself.
 - The bar stays hidden until its stylesheet has loaded, so unstyled icons never flash on the screen.
-- `demo.html` in this folder shows the bar with a sample config. Open it with a local server (for example `npx serve`) and resize the window to see the mobile layout.
+- To see the mobile layout on a computer, make the browser window narrower than the `breakpoint` (760px by default).
