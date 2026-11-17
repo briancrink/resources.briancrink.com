@@ -2,9 +2,9 @@ window.SocialBarConfig = {
   desktop: { position: "right", align: "center" },
   mobile:  { position: "bottom", align: "right" },
   border: "darker",
-  tooltip: { color: "#00ff9d", background: "#00ff9d55" },
+  tooltip: { color: "#00ff9d", background: "#00ff9d1c" },
   icons: {
-    instagram: { url: "https://instagram.com/briancrink", label: "@briancrinkApp" },
+    instagram: { url: "https://instagram.com/briancrink", label: "@briancrink" },
     x:         { url: "https://x.com/briancrink", label: "@briancrink", "border": "darker" },
     threads:   { url: "https://threads.net/@briancrink", label: "@briancrink" },
     facebook:  { url: "https://facebook.com/briancrink", label: "Brian Crink" },
